@@ -23,6 +23,7 @@
 # following shell variables:
 # targ_emul		name of emulation to use
 # targ_emul_vector	name of vector to use
+# targ_cflags
 
 case "${targ}" in
     powerpc-*-aix[5-9]* | rs6000-*-aix[5-9]*)
@@ -33,6 +34,12 @@ case "${targ}" in
     powerpc-*-aix4.3* | rs6000-*-aix4.3*)
 	targ_emul=aix
         targ_emul_vector=bin_aix_emulation
+        ;;
+
+    *-PSL1GHT-elf*)
+        targ_emul=vanilla
+        targ_emul_vector=bin_vanilla_emulation
+        targ_cflags=-D__PSL1GHT_TARGET__
         ;;
 
     *)

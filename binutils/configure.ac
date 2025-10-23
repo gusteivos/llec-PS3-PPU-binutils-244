@@ -552,8 +552,12 @@ targ=$target
 EMULATION=$targ_emul
 EMULATION_VECTOR=$targ_emul_vector
 
+TARG_CFLAGS=$targ_cflags
+
 AC_SUBST(EMULATION)
 AC_SUBST(EMULATION_VECTOR)
+
+AC_SUBST(TARG_CFLAGS)
 
 # Required for html and install-html
 AC_SUBST(datarootdir)

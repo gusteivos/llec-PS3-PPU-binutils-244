@@ -121,7 +121,8 @@ AM_CPPFLAGS = -I. -I$(srcdir) -I../bfd -I$(BFDDIR) -I$(INCDIR) \
 	 @INCINTL@ \
 	 @LARGEFILE_CPPFLAGS@ \
 	 -DLOCALEDIR="\"$(datadir)/locale\"" \
-	 -Dbin_dummy_emulation=$(EMULATION_VECTOR)
+	 -Dbin_dummy_emulation=$(EMULATION_VECTOR) \
+	 $(TARG_CFLAGS)
 
 HFILES = \
 	arsup.h binemul.h bucomm.h budbg.h \
